@@ -14,6 +14,8 @@ public class Main {
 		int T = 1;
 		T = fs.nextInt();
 		for(int tc = 0; tc < T; tc++) {
+			//when both A and B are even then max(|P[i] - Q[j]|) will definitely be 0
+			//otherwise, it can be at most equal to 1 as we are using 2 and 3 only
 			long a = fs.nextLong(), b = fs.nextLong();
 			if(Math.min(a, b) <= 1) {
 				out.println(-1);
@@ -31,7 +33,7 @@ public class Main {
 		return getGCD(b, a % b);
 	}
 	
-	/*
+	
 	static void sort(int[] a) {
 		ArrayList<Integer> arr = new ArrayList<>();
 		for(int x : a) {
@@ -42,7 +44,6 @@ public class Main {
 			a[i] = arr.get(i);
 		}
 	}
-	*/
 		
 	static class FastScanner {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
